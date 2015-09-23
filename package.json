@@ -1,0 +1,28 @@
+{
+  "name": "nodebb-plugin-inappropriate-words",
+  "version": "0.1.16",
+  "description": "NodeBB Inappropriate Words Plugin",
+  "main": "library.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thuanpq/nodebb-plugin-inappropriate-words"
+  },
+  "keywords": [
+    "nodebb",
+    "plugin",
+    "inappropriate",
+    "words"
+  ],
+  "author": {
+    "name": "ThuanPQ",
+    "email": "eragon009nt@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thuanpq/nodebb-plugin-inappropriate-words/issues"
+  },
+  "readmeFilename": "README.md",
+  "nbbpm": {
+    "compatibility": "^0.6.0 || ^0.7.0 || ^0.8.0"
+  }
+}
