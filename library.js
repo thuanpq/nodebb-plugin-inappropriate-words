@@ -38,21 +38,21 @@ plugin.addAdminNavigation = function (header, callback) {
     callback(null, header);
 };
 
-var embed = '******';
+var str2Replace = '******';
 
 plugin.parse = function (data, callback) {
+
     if (!data || !data.postData || !data.postData.content) {
         return callback(null, data);
     }
 
     if (plugin.settings !== undefined) {
-        if (data.postData.content.indexOf("olala222") != -1) {
-            var arr_words = plugin.settings.inappropriatewords.split('\n');
-            data.postData.content = data.postData.content.replace('olala222', arr_words[0]);
-        }
-    } else {
-        if (data.postData.content.indexOf("olala") != -1) {
-            data.postData.content = data.postData.content.replace('olala', embed + '@A@');
+        var arr_words = plugin.settings.inappropriatewords.split('\n'),
+            length = arr_words.length;
+        while(length--) {
+            if (data.postData.content.indexOf(arr_words[length]) != -1) {
+                data.postData.content = data.postData.content.replace(arr_words[length], str2Replace);
+            }
         }
     }
 
