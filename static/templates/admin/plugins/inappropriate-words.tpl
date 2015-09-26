@@ -5,11 +5,11 @@
 			<div class="panel-body">
 				<form role="form" class="inappropriate-words-settings">
 					<p>
-						Line by line for each inappropriate word
+						Please input all Inappropriate Words separated by comma.
 					</p>
 					<div class="form-group">
                         <label for="inappropriatewords">Inappropriate Words</label>
-                        <textarea id="inappropriatewords" name="inappropriatewords" title="Inappropriate Words" class="form-control" placeholder="Inappropriate Words" tabindex="5" data-mentions="1" style="height: 400px;"></textarea>
+                        <textarea id="inappropriatewords" name="inappropriatewords" title="Inappropriate Words" class="form-control" placeholder="Inappropriate Words" tabindex="5" data-mentions="1" style="height: 200px;"></textarea>
 						</div>
 				</form>
 			</div>

@@ -47,9 +47,10 @@ plugin.parse = function (data, callback) {
     }
 
     if (plugin.settings !== undefined) {
-        var arr_words = plugin.settings.inappropriatewords.split('\n'),
+        var arr_words = plugin.settings.inappropriatewords.split(','),
             length = arr_words.length;
-        while(length--) {
+
+        while(length-- > 0) {
             if (data.postData.content.indexOf(arr_words[length]) != -1) {
                 data.postData.content = data.postData.content.replace(arr_words[length], str2Replace);
             }
